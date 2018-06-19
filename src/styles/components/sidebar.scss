@@ -1,0 +1,17 @@
+/*============== sidebar ===================*/
+.sidebar {
+  width: 250px;
+}
+
+.sidebar li {
+  height: 30px;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.sidebar li:hover {
+  color: color(gray-400);
+}
+.sidebar .active {
+  color: color(black-500);
+}

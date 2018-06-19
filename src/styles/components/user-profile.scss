@@ -1,0 +1,24 @@
+/*============== user-profile ===================*/
+.group-user-profile {
+  display: flex;
+}
+
+.group-user-profile .user-profile {
+  margin-right: -15px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.user-profile-avatar {
+  height: 34px;
+  width: 34px;
+  border-radius: 100%;
+  border: 2px solid color(white);
+}
+
+.user-profile-title {
+  margin-left: 8px;
+}

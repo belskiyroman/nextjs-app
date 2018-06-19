@@ -1,0 +1,17 @@
+/*============== main ===================*/
+@import 'base/color';
+@import 'base/variable';
+@import 'base/normalize';
+@import 'base/custom-reset';
+@import 'fonts/index';
+@import 'utils/icons';
+@import 'utils/helpers';
+@import 'components/button';
+@import 'components/input';
+@import 'components/sidebar';
+@import 'components/table';
+@import 'components/user-profile';
+@import 'components/filters';
+@import 'layouts/general';
+@import 'errors/404';
+@import 'modules/candidates';

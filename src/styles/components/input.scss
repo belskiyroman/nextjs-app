@@ -1,0 +1,79 @@
+/*============== input ===================*/
+.search {
+  width: 298px;
+}
+
+.input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: color(white);
+  border: 1px solid color(gray-750);
+  border-radius: 4px;
+}
+
+.input--textarea {
+  align-items: unset;
+}
+
+.input--icon {
+  padding-left: 36px;
+  color: color(gray-500);
+}
+
+.input--icon:before{
+  position: absolute;
+  left: 10px;
+}
+
+.input__field {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 15px;
+  z-index: index(input-field);
+}
+
+.input__placeholder {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: color(gray-400);
+  font-size: 15px;
+  font-weight: 400;
+  transition: .3s;
+  z-index: index(input-placeholder);
+}
+
+.input__placeholder--textarea {
+  bottom: auto;
+  top: 4px;
+}
+
+.input--icon .input__placeholder {
+  left: 36px;
+}
+
+.fill.input__placeholder:not(.input__placeholder--fly),
+.input__field:focus + .input__placeholder:not(.input__placeholder--fly) {
+  display: none;
+}
+
+.fill.input__placeholder--fly,
+.input__field:focus + .input__placeholder--fly {
+  bottom: calc(100% + 4px);
+  left: 0;
+  font-size: 12px;
+}
+
+.fill.input__placeholder--fly.input__placeholder--textarea,
+.input__field:focus + .input__placeholder--fly.input__placeholder--textarea {
+  top: -4px;
+  bottom: auto;
+  transform: translateY(-100%);
+}
+
+.input--big {
+  height: 40px;
+}

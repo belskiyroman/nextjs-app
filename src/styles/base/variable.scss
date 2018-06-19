@@ -1,0 +1,59 @@
+/*=========================================== colors of components ===================================================*/
+$icomoon-font-path: 'icomoon/fonts';
+
+$base-color-1: color(gray-850);
+$font-color-base: color(gray-400);
+$overlay-color: rgba(0, 0, 0, 0.5);
+$border-radius: 4px;
+/*=========================================== buttons===================================================*/
+
+$button-primary-bg: color(blue-500);
+$button-primary-bg-hover: color(blue-500);
+$button-primary-bg-active: color(blue-500);
+$button-primary-bg-disable: color(gray-500);
+$button-primary-border: none;
+$button-primary-border-hover: none;
+$button-primary-border-active: none;
+$button-primary-border-disable: none;
+$button-primary-color: color(white);
+$button-primary-color-hover: color(white);
+$button-primary-color-active: color(white);
+$button-primary-color-disable: color(white);
+$button-primary-shadow: none;
+$button-primary-shadow-hover: none;
+$button-primary-shadow-active: inset 0 2px 3px 0 rgba(0,0,0,0.15);
+$button-primary-shadow-disable: none;
+
+$button-border-bg: color(white);
+$button-border-bg-hover: color(gray-825);
+$button-border-bg-active: color(gray-825);
+$button-border-bg-disable: color(white);
+$button-border-border: 1px solid color(blue-500);
+$button-border-border-hover: 1px solid color(blue-500);
+$button-border-border-active: 1px solid color(blue-500);
+$button-border-border-disable: 1px solid color(blue-500-disable);
+$button-border-color: color(blue-500);
+$button-border-color-hover: color(blue-500);
+$button-border-color-active: color(blue-500);
+$button-border-color-disable: color(blue-500-disable);
+$button-border-shadow: none;
+$button-border-shadow-hover: none;
+$button-border-shadow-active: inset 0 2px 3px 0 rgba(0,0,0,0.15);
+$button-border-shadow-disable: none;
+
+$button-border-less-bg: color(invisible);
+$button-border-less-bg-hover: color(invisible);
+$button-border-less-bg-active: color(invisible);
+$button-border-less-bg-disable: color(invisible);
+$button-border-less-border: 1px solid color(invisible);
+$button-border-less-border-hover: 1px solid color(gray-750);
+$button-border-less-border-active: 1px solid color(gray-750);
+$button-border-less-border-disable: 1px solid color(invisible);
+$button-border-less-color: color(blue-500);
+$button-border-less-color-hover: color(blue-500);
+$button-border-less-color-active: color(blue-500);
+$button-border-less-color-disable: color(blue-500);
+$button-border-less-shadow: none;
+$button-border-less-shadow-hover: 0 2px 4px 0 rgba(0,0,0,0.2);
+$button-border-less-shadow-active: inset 0 2px 3px 0 rgba(0,0,0,0.1);
+$button-border-less-shadow-disable: none;

@@ -1,0 +1,150 @@
+/*============== helpers ===================*/
+
+// margin top, left, right, bottom helpers
+@each $size in (10, 20, 25, 40, 66) {
+  @each $prop in (b: bottom, l: left, r: right, t: top) {
+    .m-#{nth($prop, 1)}-#{$size} {
+      margin-#{nth($prop, 2)}: #{$size}px;
+    }
+  }
+}
+
+// negative margin top, left, right, bottom helpers
+@each $size in (45) {
+  @each $prop in (b: bottom, l: left, r: right, t: top) {
+    .m-#{nth($prop, 1)}-n#{$size} {
+      margin-#{nth($prop, 2)}: -#{$size}px;
+    }
+  }
+}
+
+// padding top, left, right, bottom helpers
+@each $size in (4, 6, 10, 20, 40, 50) {
+  @each $prop in (b: bottom, l: left, r: right, t: top) {
+    .p-#{nth($prop, 1)}-#{$size} {
+      padding-#{nth($prop, 2)}: #{$size}px;
+    }
+  }
+}
+
+// font size helpers
+@each $size in (14, 15, 16, 18) {
+  .font-#{$size} {
+    font-size: #{$size}px;
+  }
+}
+
+// z-index helpers
+$z-index: (
+        popup: 101,
+        popup-overlay: 100,
+        input-field: 1,
+        input-placeholder: 2,
+);
+
+@each $index in $z-index {
+  .z-#{nth($index, 1)} {
+    z-index: nth($index, 2);
+  }
+}
+
+@function index($index) {
+  @return map-get($z-index, $index)
+}
+// end z-index
+
+.none {
+  display: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.modal-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-layout__center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-layout__embedded {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-layout__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $overlay-color;
+  z-index: index(popup-overlay);
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icon {
+  margin: 1px;
+  width: 16px;
+}
+
+.label-tag {
+  padding: 4px 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid color(gray-780);
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.line-height-20 {
+  line-height: 20px;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-space-beatwen {
+  justify-content: space-between;
+}
+
+.flex-grow-1 {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}

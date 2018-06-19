@@ -1,0 +1,38 @@
+.filters {
+  width: 940px;
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: 0 0 20px 0 #adadad;
+}
+
+.filters__section-avatar {
+  width: 240px;
+}
+
+.filters__item {
+  width: 140px;
+  min-height: 20px;
+  margin-bottom: 5px;
+}
+.filters__item__bg {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  &:before {
+    display: none;
+    position: absolute;
+    right: -20px;
+    color: color(gray-500);
+  }
+}
+
+.filters__active {
+  background-color: color(gray-800);
+  border-radius: $border-radius;
+
+  &:before {
+    display: inline-block;
+  }
+}
+

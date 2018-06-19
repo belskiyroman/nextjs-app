@@ -1,0 +1,117 @@
+/*============== button ===================*/
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button--icon {
+  padding-left: 36px;
+}
+
+.button--icon:before {
+  position: absolute;
+  left: 10px;
+}
+
+.button--big {
+  height: 40px;
+}
+
+.button__text {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+
+.button--disabled {
+  opacity: .5;
+}
+
+.button--primary {
+  background-color: $button-primary-bg;
+  border: $button-primary-border;
+  color: $button-primary-color;
+  box-shadow: $button-primary-shadow;
+
+  &:hover {
+    background-color: $button-primary-bg-hover;
+    border: $button-primary-border-hover;
+    color: $button-primary-color-hover;
+    box-shadow: $button-primary-shadow-hover;
+  }
+
+  &:active {
+    background-color: $button-primary-bg-active;
+    border: $button-primary-border-active;
+    color: $button-primary-color-active;
+    box-shadow: $button-primary-shadow-active;
+  }
+
+  &.button--disable {
+    background-color: $button-primary-bg-disable;
+    border: $button-primary-border-disable;
+    color: $button-primary-color-disable;
+    box-shadow: $button-primary-shadow-disable;
+  }
+}
+
+.button--border {
+  background-color: $button-border-bg;
+  border: $button-border-border;
+  color: $button-border-color;
+  box-shadow: $button-border-shadow;
+
+  &:hover {
+    background-color: $button-border-bg-hover;
+    border: $button-border-border-hover;
+    color: $button-border-color-hover;
+    box-shadow: $button-border-shadow-hover;
+  }
+
+  &:active {
+    background-color: $button-border-bg-active;
+    border: $button-border-border-active;
+    color: $button-border-color-active;
+    box-shadow: $button-border-shadow-active;
+  }
+
+  &.button--disable {
+    background-color: $button-border-bg-disable;
+    border: $button-border-border-disable;
+    color: $button-border-color-disable;
+    box-shadow: $button-border-shadow-disable;
+  }
+}
+
+.button--border-less {
+  background-color: $button-border-less-bg;
+  border: $button-border-less-border;
+  color: $button-border-less-color;
+  box-shadow: $button-border-less-shadow;
+
+  &:hover {
+    background-color: $button-border-less-bg-hover;
+    border: $button-border-less-border-hover;
+    color: $button-border-less-color-hover;
+    box-shadow: $button-border-less-shadow-hover;
+  }
+
+  &:active {
+    background-color: $button-border-less-bg-active;
+    border: $button-border-less-border-active;
+    color: $button-border-less-color-active;
+    box-shadow: $button-border-less-shadow-active;
+  }
+
+  &.button--disable {
+    background-color: $button-border-less-bg-disable;
+    border: $button-border-less-border-disable;
+    color: $button-border-less-color-disable;
+    box-shadow: $button-border-less-shadow-disable;
+  }
+}

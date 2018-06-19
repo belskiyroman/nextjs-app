@@ -1,0 +1,33 @@
+/*============== table ===================*/
+.table {
+  width: 100%;
+}
+
+.table-header {
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  color: color(gray-500);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.table-row {
+  height: 75px;
+  border-bottom: 1px solid color(gray-775);
+}
+
+.table td:not(.text-left) span,
+.table-row:not(.text-left) {
+  padding-left: 10px;
+}
+
+.table td:not(.text-right) span,
+.table-row:not(.text-right) {
+  padding-right: 10px;
+}
