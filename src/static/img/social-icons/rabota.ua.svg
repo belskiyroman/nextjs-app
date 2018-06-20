@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>rabota.ua</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="17" height="17" rx="1.91549296"></rect>
+    </defs>
+    <g id="Рекрутинг" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="rabota.ua">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Rectangle-6" fill="#FFFFFF" xlink:href="#path-1"></use>
+            <g id="logo-symbol-red" mask="url(#mask-2)" fill="#FF5252" fill-rule="nonzero">
+                <g transform="translate(1.049805, 1.008301)" id="Shape">
+                    <path d="M0,7.5 C0,3.36375 3.36375,0 7.5,0 C11.63625,0 15,3.36375 15,7.5 C15,11.63625 11.63625,15 7.5,15 C3.36375,15 0,11.63625 0,7.5 Z M1.666875,7.5 C1.666875,10.715625 4.284375,13.333125 7.5,13.333125 C10.715625,13.333125 13.333125,10.715625 13.333125,7.5 C13.333125,4.284375 10.715625,1.666875 7.5,1.666875 C4.284375,1.666875 1.666875,4.284375 1.666875,7.5 Z M7.616875,5.485 C8.20125,4.8575 8.9125,4.5 9.873125,4.5 L10.295,4.5 L10.295,6.7775 C8.00625,6.7775 7.6175,6.81125 7.6175,7.655625 L7.6175,10.5 L5.395,10.5 L5.395,4.5 L7.6175,4.5 L7.6175,5.485 L7.616875,5.485 Z"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

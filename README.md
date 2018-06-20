@@ -36,12 +36,12 @@ my-app/
     head.js
     nav.js
   pages/
-    index.js
+    index.jsx
   static/
     favicon.ico
 ```
 
-Routing in Next.js is based on the file system, so `./pages/index.js` maps to the `/` route and
+Routing in Next.js is based on the file system, so `./pages/index.jsx` maps to the `/` route and
 `./pages/about.js` would map to `/about`.
 
 The `./static` directory maps to `/static` in the `next` server, so you can put all your

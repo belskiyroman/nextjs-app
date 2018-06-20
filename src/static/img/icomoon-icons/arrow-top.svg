@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Select-/-Border-/-Expand-Change" transform="translate(-207.000000, -33.000000)" fill="#C9C9C9" fill-rule="nonzero">
+            <g id="Group">
+                <path d="M215.292893,35.2928932 C215.683418,34.9023689 216.316582,34.9023689 216.707107,35.2928932 C217.097631,35.6834175 217.097631,36.3165825 216.707107,36.7071068 L212.707107,40.7071068 C212.316582,41.0976311 211.683418,41.0976311 211.292893,40.7071068 L207.292893,36.7071068 C206.902369,36.3165825 206.902369,35.6834175 207.292893,35.2928932 C207.683418,34.9023689 208.316582,34.9023689 208.707107,35.2928932 L212,38.5857864 L215.292893,35.2928932 Z" id="Shape" transform="translate(212.000000, 38.000000) scale(1, -1) translate(-212.000000, -38.000000) " fill="#C9C9C9"></path>
+            </g>
+        </g>
+    </g>
+</svg>
