@@ -1,4 +1,4 @@
-import Applicants from './applicants';
+import Applicants from './candidates';
 import Positions from './positions';
 import JobInterviews from './job-interviews';
 import JobOffers from './job-offers';

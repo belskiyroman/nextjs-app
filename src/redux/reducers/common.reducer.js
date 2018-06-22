@@ -1,19 +1,13 @@
-import { commonTypes } from '../types';
+import { CHANGE_URL } from '../types/common.type';
 
 const INITIAL_STATE = {
-  test: true,
-  server: '',
+  currentUrl: global && global.location ? global.location.pathname : '',
 };
 
-const commonReducer = (state = INITIAL_STATE, action) => {
-  const { type, payload } = action;
+const commonReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
-    case commonTypes.INDEX_TEST:
-      return { ...state, test: payload };
-    case commonTypes.SERVER_DATA:
-      return { ...state, server: payload };
-    default:
-      return state;
+    case CHANGE_URL: return { ...state, currentUrl: payload };
+    default: return state;
   }
 };
 

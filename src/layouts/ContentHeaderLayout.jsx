@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class ContentHeaderLayout extends Component {
+const ContentHeaderLayout = ({ children }) => <div className="content-header">{children}</div>;
 
-  render() {
-    return (
-      <div className='content-header'>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+ContentHeaderLayout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
 
-export default ContentHeaderLayout
+export default ContentHeaderLayout;

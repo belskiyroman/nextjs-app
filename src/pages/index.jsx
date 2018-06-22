@@ -1,8 +1,6 @@
-import Applicants from '../components/pages/Applicants';
-import data from '../seeds/applicants';
+import CandidatesPage from './candidates';
+import data from '../seeds/candidates';
 
-Applicants.getInitialProps = async ({ store }) => {
-  return data;
-};
+CandidatesPage.getInitialProps = async ({ store }) => data;
 
-export default Applicants;
+export default CandidatesPage;

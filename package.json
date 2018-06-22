@@ -13,8 +13,10 @@
     "start": "next start ./src"
   },
   "dependencies": {
+    "apiapi": "^1.7.1",
     "classnames": "^2.2.6",
     "css-loader": "^0.28.11",
+    "express": "^4.16.3",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.11",
     "next": "^6.0.3",
@@ -37,6 +39,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1"
+    "eslint-plugin-react": "^7.9.1",
+    "react-styleguidist": "^7.0.17"
   }
 }

@@ -1,4 +1,14 @@
 const data = {
+  user: {
+    isAuth: true,
+    profile: {
+      emails: 'rb@anadeainc.com',
+      displayName: 'Роман Бельский',
+      lastName: 'Бельский',
+      firstNameName: 'Роман',
+      image:'https://lh6.googleusercontent.com/-Fy6px7pOvNM/AAAAAAAAAAI/AAAAAAAAAAA/AB6qoq3UdaIMShIJEFJiMFkRoa9o45eM9g/mo/photo.jpg?sz=50',
+    },
+  },
   searchCount: 42,
   pageCount: 20,
   currentPage: 2,

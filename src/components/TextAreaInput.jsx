@@ -18,13 +18,14 @@ class TextAreaInput extends Component {
   render() {
     const placeholder = {
       'input__placeholder--fly': this.props.fly,
-      'fill': this.state.value,
+      fill: this.state.value,
     };
     return (
-      <div className='input input--textarea'>
-        <textarea type='text' className='input__field flex-grow-1 p-t-4 p-b-4 p-l-10 p-r-10' onChange={this.onChange.bind(this)}>{
+      <div className="input input--textarea">
+        <textarea type="text" className="input__field flex-grow-1 p-t-4 p-b-4 p-l-10 p-r-10" onChange={this.onChange.bind(this)}>{
           this.props.text
-        }</textarea>
+        }
+        </textarea>
         <span className={classNames('input__placeholder input__placeholder--textarea', placeholder)}>{this.props.placeholder}</span>
       </div>
     );
@@ -39,4 +40,4 @@ TextAreaInput.propTypes = {
   text: PropTypes.string,
 };
 
-export default TextAreaInput
+export default TextAreaInput;

@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class ContentLayout extends Component {
+const ContentLayout = ({ children }) => <div className="content flex-grow-1 m-b-40">{children}</div>;
 
-  render() {
-    return (
-      <div className='content flex-grow-1 m-b-40'>
-        {this.props.children}
-      </div>
-    );
-  }
-}
+ContentLayout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
 
-export default ContentLayout
+export default ContentLayout;

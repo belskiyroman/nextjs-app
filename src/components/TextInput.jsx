@@ -23,11 +23,11 @@ class TextInput extends Component {
     };
     const placeholder = {
       'input__placeholder--fly': this.props.fly,
-      'fill': this.state.value,
+      fill: this.state.value,
     };
     return (
       <div className={classNames('input input--big p-r-10', icon, this.props.className)}>
-        <input type='text' className='input__field flex-grow-1' value={this.props.text} onChange={this.onChange.bind(this)} />
+        <input type="text" className="input__field flex-grow-1" value={this.props.text} onChange={this.onChange.bind(this)} />
         <span className={classNames('input__placeholder', placeholder)}>{this.props.placeholder}</span>
       </div>
     );
@@ -42,4 +42,4 @@ TextInput.propTypes = {
   text: PropTypes.string,
 };
 
-export default TextInput
+export default TextInput;
