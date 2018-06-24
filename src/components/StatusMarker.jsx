@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 class StatusMarker extends Component {
-
   static status = {
-    fired: 'in-black',
-    accepted: 'in-blue-500',
-    intern: 'in-blue-700',
-    interview: 'in-magenta-300',
-    new: 'in-green-500',
-    notHire: 'in-red-500',
-    reserve: 'in-yellow-400',
-    hire: 'in-magenta-500',
-    test: 'in-blue-300',
+    Fired: { title: 'Fired', colorClass: 'in-black' },
+    Accepted: { title: 'Accepted', colorClass: 'in-blue-500' },
+    Interns: { title: 'Interns', colorClass: 'in-blue-700' },
+    Interview: { title: 'Interview', colorClass: 'in-magenta-300' },
+    New: { title: 'New', colorClass: 'in-green-500' },
+    NotHire : { title: 'Not Hire', colorClass: 'in-red-500' },
+    Reserve: { title: 'Reserve', colorClass: 'in-yellow-400' },
+    Hire: { title: 'Hire', colorClass: 'in-magenta-500' },
+    Test: { title: 'Test', colorClass: 'in-blue-300' },
   };
 
   render() {
@@ -25,7 +24,7 @@ class StatusMarker extends Component {
 
 StatusMarker.propTypes = {
   tag: PropTypes.string,
-  status: PropTypes.oneOf(Object.values(StatusMarker.status)),
+  status: PropTypes.string,
 };
 
 export default StatusMarker

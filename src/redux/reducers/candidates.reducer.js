@@ -1,14 +1,14 @@
+import { CANDIDATES_FETCH_ALL_SUCCESS, CANDIDATES_FETCH_ALL_ERROR } from '../types/candidates.type';
 import list from '../../seeds/api/candidates/list.json';
-import apiService from '../../services/api.service';
-
-apiService
 
 const initialState = {
+  fetched: false,
   candidatesList: list,
 };
 
 const candidatesReducer = (state = initialState, {type, payload}) => {
   switch (type) {
+    case CANDIDATES_FETCH_ALL_SUCCESS: return { ...state, candidatesList: payload, fetched: true };
     default: return state;
   }
 };

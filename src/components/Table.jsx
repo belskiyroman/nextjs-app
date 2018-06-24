@@ -5,7 +5,6 @@ import StatusMarker from './StatusMarker';
 import GroupUserProfile from './GroupUserProfile';
 
 class Table extends Component {
-  static status = StatusMarker.status;
 
   static socialNetwork = {
     linkedin: 'icon-linkedin',
@@ -113,7 +112,7 @@ Table.propTypes = {
 
 Table.Cell.propTypes = {
   cellType: PropTypes.oneOf(Object.values(Table.cellType)),
-  status: PropTypes.oneOf(Object.values(Table.status)),
+  status: PropTypes.string,
   icons: PropTypes.arrayOf(PropTypes.oneOf(Object.values(Table.socialNetwork))),
   text: PropTypes.string,
   subText: PropTypes.string,
@@ -165,6 +164,13 @@ const socialDataContent = ({icons=[], position, level}) => {
     </div>
   )
 };
-const statusContent = ({tag, status}) => (<StatusMarker tag={tag} status={status} />);
-const usersContent = ({users=[]}) => (<GroupUserProfile users={users} />);
-const dateContent = ({date}) => (<span className='in-gray-500 font-14'>{date ? new Date(date).toDateString() : null}</span>);
+const usersContent = ({users=[]}) => <GroupUserProfile users={users} />;
+const statusContent = ({tag, status}) => (
+  <StatusMarker
+    tag={StatusMarker.status[tag] ? StatusMarker.status[tag].title : tag}
+    status={StatusMarker.status[status] ? StatusMarker.status[status].colorClass : ''}
+  />);
+const dateContent = ({date}) => (
+  <span className='in-gray-500 font-14'>
+    {date ? new Date(date).toDateString() : null}
+  </span>);

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CandidatesConnect from '../containers/pages/candidates.connect';
+import CandidatesConnect from '../hocs/pages/candidates.connect';
 import MainLayout from '../layouts/MainLayout';
 import ContentHeaderLayout from '../layouts/ContentHeaderLayout';
 import ContentLayout from '../layouts/ContentLayout';
@@ -35,6 +35,10 @@ class CandidatesPage extends Component {
       (a, b) => a.managers.length > b.managers.length,
       (a, b) => Date.parse(a.dateOfContact) > Date.parse(b.dateOfContact),
     ];
+  }
+
+  componentDidMount() {
+    this.props.fetchCandidatesList();
   }
 
   search(search) {
@@ -78,7 +82,6 @@ class CandidatesPage extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { searchCount, filters, candidatesList = [], userProfile, isUserAuth, currentUrl } = this.props;
     return (
       <MainLayout>
@@ -98,38 +101,66 @@ class CandidatesPage extends Component {
               {/*<Filters filters={filters} onClose={() => this.setState({ isOpenFilter: false })} />*/}
             {/*</ModalLayout>*/}
             <div className="flex">
-              <TextInput className="search m-r-10" icon="icon-search" placeholder="Поиск" onChange={val => this.search(val)} />
-              <Button className="m-r-10" type={Button.type.primary} icon="icon-filters" text="Фильтры" onClick={() => this.setState({ isOpenFilter: true })} />
-              <Button type={Button.type.borderLess} text="Очистить" onClick={e => console.log('reset filters', e)} disabled={this.state.isFilterEmpty} />
+              <TextInput
+                className="search m-r-10"
+                icon="icon-search"
+                placeholder="Поиск"
+                onChange={val => this.search(val)}
+              />
+              <Button
+                className="m-r-10"
+                type={Button.type.primary}
+                icon="icon-filters"
+                text="Фильтры"
+                onClick={() => this.setState({ isOpenFilter: true })}
+              />
+              <Button
+                type={Button.type.borderLess}
+                text="Очистить"
+                onClick={e => console.log('reset filters', e)}
+                disabled={this.state.isFilterEmpty}
+              />
             </div>
-            <Button type={Button.type.primary} icon="icon-plus" text="Новый Кандидат" onClick={e => console.log('add applicant', e)} />
+            <Button
+              type={Button.type.primary}
+              icon="icon-plus"
+              text="Новый Кандидат"
+              onClick={e => console.log('add applicant', e)}
+            />
           </ContentHeaderLayout>
 
           <ContentLayout>
-            {searchCount && <span className="font-14 m-b-10 inline-block">По вашему запросу найдено {searchCount} кандидата</span>}
-            <Table sort={val => this.sort(val)} headers={['имя', 'специальзация, уровень', 'статус', 'контактное лицо', 'дата контакта']}>{
-              candidatesList.map(rowData => (
-                <Table.Row key={rowData.lastName + rowData.position}>
+            {
+              searchCount &&
+              <span className="font-14 m-b-10 inline-block">
+                По вашему запросу найдено {searchCount} кандидата
+              </span>
+            }
+            <Table
+              sort={val => this.sort(val)}
+              headers={['имя', 'специальзация, уровень', 'статус', 'контактное лицо', 'дата контакта']}>
+              {candidatesList.map(rowData => (
+                <Table.Row key={rowData.id}>
                   <Table.Cell
                     className="text-left"
                     cellType={Table.cellType.colorText}
-                    text={`${rowData.firstName} ${rowData.firstName}`}
+                    text={`${rowData.firstName} ${rowData.lastName}`}
                     subText={rowData.city}
                   />
                   <Table.Cell
                     cellType={Table.cellType.socialData}
                     icons={[Table.socialNetwork[rowData.socialNetwork]]}
-                    position={rowData.position}
+                    position={rowData.position.title}
                     level={rowData.level}
                   />
                   <Table.Cell
                     cellType={Table.cellType.status}
-                    status={Table.status[rowData.status]}
+                    status={rowData.status}
                     tag={rowData.status}
                   />
                   <Table.Cell
                     cellType={Table.cellType.users}
-                    users={rowData.managers.map(manager => manager.avatar)}
+                    users={rowData.experts.map(manager => manager.avatar)}
                   />
                   <Table.Cell
                     className="text-right"
@@ -137,8 +168,7 @@ class CandidatesPage extends Component {
                     date={rowData.dateOfContact}
                   />
                 </Table.Row>
-              ))
-            }
+              ))}
             </Table>
           </ContentLayout>
         </section>
